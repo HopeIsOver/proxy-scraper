@@ -1,6 +1,7 @@
 exports.config = {
     framework: 'jasmine',
-    seleniumAddress: 'http://localhost:4444/wd/hub',
+    seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
+    chromeDriver: '/usr/local/share/chromedriver-linux64/chromedriver',
     specs: ['spec.js'],
     directConnect: true,
     multiCapabilities: [{
@@ -8,6 +9,5 @@ exports.config = {
         chromeOptions: {
             args: ["--headless"]
         }
-    }],
-    chromeDriver: './node_modules/chromedriver/lib/chromedriver/chromedriver' //Fix for https://github.com/angular/webdriver-manager/issues/523
+    }]
 };
